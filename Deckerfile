@@ -1,0 +1,6 @@
+FROM python:3.7
+RUN apt-get update
+RUN mkdir /data && touch /data/error.log
+COPY . .
+RUN python install_packages.py
+VOLUME /data
